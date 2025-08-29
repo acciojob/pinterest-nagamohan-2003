@@ -3,56 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pinterest-like Hero Section</title>
+    <title>Pinterest Hero Section</title>
     <style>
-        /* Hero container styling */
-        .hero {
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh; /* full viewport height */
-            background-color: #f5f5f5;
-            flex-direction: column; /* stack items vertically */
-            text-align: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
         }
 
-        /* Image styling */
-        .hero img {
+        .hero {
+            position: relative;
             width: 80%;
-            max-width: 800px;
-            height: 400px;
-            object-fit: cover; /* ensure image covers the container without distortion */
-            border-radius: 12px;
-            margin-bottom: 20px;
+            max-width: 1200px;
+            height: 500px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        /* Explore Now button styling */
-        .hero .explore-btn {
-            padding: 12px 30px;
-            background-color: #e60023; /* Pinterest red */
+        .hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-content {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+
+        .explore-button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 25px;
+            background-color: #e60023;
             color: white;
             text-decoration: none;
-            border-radius: 25px;
-            font-size: 18px;
+            border-radius: 50px;
             font-weight: bold;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s ease;
         }
 
-        .hero .explore-btn:hover {
-            background-color: #b8001d;
+        .explore-button:hover {
+            background-color: #ad081b;
         }
     </style>
 </head>
 <body>
 
     <div class="hero">
-        <!-- Image -->
-        <img src="https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg" alt="Hero Image">
-
-        <!-- Explore Now button -->
-        <a href="#" class="explore-btn">Explore Now</a>
+        <img src="https://images.unsplash.com/photo-1547348983-0570b5d92823?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Beautiful landscape with vibrant colors">
+        <div class="hero-content">
+            <h1>Find your next idea</h1>
+            <a href="#" class="explore-button">Explore Now</a>
+        </div>
     </div>
 
 </body>
 </html>
-
