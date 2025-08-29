@@ -1,16 +1,58 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinterest-like Hero Section</title>
+    <style>
+        /* Hero container styling */
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* full viewport height */
+            background-color: #f5f5f5;
+            flex-direction: column; /* stack items vertically */
+            text-align: center;
+        }
 
+        /* Image styling */
+        .hero img {
+            width: 80%;
+            max-width: 800px;
+            height: 400px;
+            object-fit: cover; /* ensure image covers the container without distortion */
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        /* Explore Now button styling */
+        .hero .explore-btn {
+            padding: 12px 30px;
+            background-color: #e60023; /* Pinterest red */
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .hero .explore-btn:hover {
+            background-color: #b8001d;
+        }
+    </style>
+</head>
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+
+    <div class="hero">
+        <!-- Image -->
+        <img src="https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg" alt="Hero Image">
+
+        <!-- Explore Now button -->
+        <a href="#" class="explore-btn">Explore Now</a>
+    </div>
 
 </body>
-
 </html>
+
